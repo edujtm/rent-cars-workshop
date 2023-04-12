@@ -236,3 +236,113 @@ Documentação:
   font-size: 1.2em;
 }
 </style>
+
+--- 
+layout: statement
+--- 
+
+# Demo: criando service para tela de bookings
+
+---
+layout: two-cols
+---
+
+# Exercício: service para listagem de veículos
+
+- Crie um service para listagem de veículos
+
+- Registre o service no módulo específico
+
+- Crie um BehaviorSubject para armazenar o resultado da requisição
+
+- Associe o behaviorsubject ao template, associando-o à uma variável do componente ou usando o pipe async
+
+::right::
+
+
+<div>
+
+<span class="branch">Branch do exercício: exercise/4-services</span>
+</div>
+
+Para trocar de branch:
+
+```bash
+git add .
+git stash
+git checkout exercise/4-services
+```
+
+Documentação:
+  - AsyncPipe: [link](https://angular.io/guide/reactive-forms)
+
+<style>
+.branch {
+  color: lightgreen;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+</style>
+
+---
+layout: statement
+---
+
+# Demo: Criando HTTP interceptor
+
+---
+layout: two-cols
+---
+
+# Exercício: Crie um interceptor de token de autorização
+
+<div class="right-side">
+Crie um interceptor que obtem a token do local storage e adiciona
+à requisição.
+
+```ts
+@Injectable()
+export class UnauthorizedInterceptor implements HttpInterceptor {
+
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    return next.handle(request);
+  }
+}
+```
+
+Dica: 
+a classe HttpRequest é imutável. Para modificá-la é necessário
+usar o método `HttpRequest.clone()` passando um dicionário com
+as propriedades que serão alteradas
+</div>
+
+::right::
+
+<div>
+
+<span class="branch">Branch do exercício: exercise/5-interceptors</span>
+</div>
+
+Para trocar de branch:
+
+```bash
+git add .
+git stash
+git checkout exercise/5-interceptors
+```
+
+Documentação:
+  - Interceptors: [link](https://angular.io/guide/reactive-forms)
+  - HttpRequest: [link](https://angular.io/api/common/http/HttpRequest#description)
+
+<style>
+.right-side {
+  padding: 0px 10px;
+}
+
+.branch {
+  color: lightgreen;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+</style>
