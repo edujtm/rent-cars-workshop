@@ -81,6 +81,9 @@ layout: two-cols
 3. Adicione um output para o botão de submit
 
 Documentação da biblioteca de componentes: [taiga-ui.dev](https://taiga-ui.dev/)
+ - Input: [link](https://taiga-ui.dev/components/input#base)
+ - InputPassword: [link](https://taiga-ui.dev/components/input-password#sizes)
+ - Error: [link](https://taiga-ui.dev/components/error)
 
 </div>
 
